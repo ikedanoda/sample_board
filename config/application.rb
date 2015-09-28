@@ -24,14 +24,16 @@ module Bords
     config.i18n.default_locale = :ja
 
     config.generators do |g|
+      g.assets false
       g.helper false
-      g.stylesheets false
-      g.javascripts false
-      g.test_framework = 'rspec'
-      g.controller_specs = false
-      g.helper_specs = false
-      g.view_specs = false
-      g.routing_specs = false
+      g.test_framework :rspec,
+                       fixture: true,
+                       fixture_replacement: :factory_girl,
+                       view_specs: false,
+                       routing_specs: false,
+                       controller_specs: false,
+                       helper_specs: false,
+                       integration_tool: false
     end
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
