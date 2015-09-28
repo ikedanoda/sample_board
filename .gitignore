@@ -27,5 +27,3 @@ vendor/bundle
 .env
 public/assets
 .sass-cache
-Gemfile.lock
-/db/schema.rb
